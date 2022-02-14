@@ -43,7 +43,7 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute([$author, $is_published, $limit]);
 $posts = $stmt->fetchAll();
 
-// ? Named Params
+// ? Named Params     :author   :is_published 
 // $sql = 'SELECT * FROM posts WHERE author = :author && is_published = :is_published';
 // $stmt = $pdo->prepare($sql);
 // $stmt->execute(['author' => $author, 'is_published' => $is_published]);
